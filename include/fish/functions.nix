@@ -1,0 +1,34 @@
+{
+  edit-home = {
+    description = "Open home-manager folder in neovim";
+    body = builtins.readFile ./functions/edit-home.fish;
+  };
+  preset-picosdk = {
+    description = "Creates a folder with the Pico SDK template";
+    body = builtins.readFile ./functions/preset-picosdk.fish;
+  };
+  preset-typescript = {
+    description = "Creates a folder with the Typescript template";
+    body = builtins.readFile ./functions/preset-typescript.fish;
+  };
+  setup-gh = {
+    description = "Setup for gh";
+    body = builtins.readFile ./functions/setup-gh.fish;
+  };
+  setup-picotool = {
+    description = "Setup for picotool";
+    body = builtins.readFile ./functions/setup-picotool.fish;
+  };
+  update-pkgs = {
+    description = "Upgrades packages from dnf, flatpak and brew";
+    body = builtins.readFile ./functions/update-pkgs.fish;
+  };
+  update-dev = {
+    description = "Upgrades development tools";
+    body = builtins.readFile ./functions/update-dev.fish;
+  };
+  update-nix = {
+    description = "Upgrades packages from nix";
+    body = builtins.readFile ./functions/update-nix.fish;
+  };
+}
