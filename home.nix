@@ -9,8 +9,6 @@
   nixGL.installScripts = [ "mesa" ];
 
   imports = [
-    ./modules/configuration.nix
-    ./modules/desktopEntries.nix
     ./modules/programs.nix
   ];
 
