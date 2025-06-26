@@ -20,12 +20,8 @@
     body = builtins.readFile ./functions/setup-picotool.fish;
   };
   update-pkgs = {
-    description = "Upgrades packages from dnf, flatpak and brew";
+    description = "Upgrades packages from dnf and flatpak";
     body = builtins.readFile ./functions/update-pkgs.fish;
-  };
-  update-dev = {
-    description = "Upgrades development tools";
-    body = builtins.readFile ./functions/update-dev.fish;
   };
   update-nix = {
     description = "Upgrades packages from nix";

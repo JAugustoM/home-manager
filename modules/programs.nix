@@ -1,6 +1,7 @@
 { ... }:
 {
   imports = [
+    ./programs/bash.nix
     ./programs/bat.nix
     ./programs/beets.nix
     ./programs/direnv.nix

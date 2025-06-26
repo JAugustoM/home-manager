@@ -1,2 +1,0 @@
-rustup update
-mise up
