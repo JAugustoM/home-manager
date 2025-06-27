@@ -16,6 +16,7 @@
     ./programs/lazygit.nix
     ./programs/neovim.nix
     ./programs/nh.nix
+    ./programs/obsidian.nix
     ./programs/omp.nix
     ./programs/ripgrep.nix
     ./programs/yazi.nix
