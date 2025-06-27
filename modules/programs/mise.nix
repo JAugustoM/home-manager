@@ -2,7 +2,6 @@
 {
   programs.mise = {
     enable = true;
-    package = config.lib.nixGL.wrap pkgs.mise;
     globalConfig = {
       settings = {
         npm.bun = true;

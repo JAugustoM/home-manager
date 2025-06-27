@@ -5,6 +5,7 @@
     ./programs/bat.nix
     ./programs/beets.nix
     ./programs/direnv.nix
+    ./programs/distrobox.nix
     ./programs/fastfetch.nix
     ./programs/fd.nix
     ./programs/fish.nix

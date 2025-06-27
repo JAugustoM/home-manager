@@ -10,6 +10,7 @@
 
   imports = [
     ./modules/programs.nix
+    ./modules/desktopEntries.nix
   ];
 
   home.packages = [
@@ -24,8 +25,17 @@
     (config.lib.nixGL.wrap pkgs.tldr)
     (config.lib.nixGL.wrap pkgs.uv)
   ];
-  home.file = {};
-  home.sessionVariables = {};
+
+  home.sessionPath = [
+    "$HOME/.local/bin/"
+    "$HOME/bin/"
+    "$HOME/.bun/bin/"
+    "$HOME/.cargo/bin/"
+  ];
+
+  home.sessionVariables = {
+    LANGUAGE = "en_US";
+  };
 
   programs.home-manager.enable = true;
 }
