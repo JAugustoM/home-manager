@@ -1,16 +1,17 @@
 { config, lib, pkgs, ... }:
 {
-  home.packages = [
-    (config.lib.nixGL.wrap pkgs.aria2)
-    (config.lib.nixGL.wrap pkgs.bun)
-    (config.lib.nixGL.wrap pkgs.dualsensectl)
-    (config.lib.nixGL.wrap pkgs.imagemagick)
-    (config.lib.nixGL.wrap pkgs.kew)
-    (config.lib.nixGL.wrap pkgs.poppler)
-    (config.lib.nixGL.wrap pkgs.nodejs)
-    (config.lib.nixGL.wrap pkgs.resvg)
-    (config.lib.nixGL.wrap pkgs.tldr)
-    (config.lib.nixGL.wrap pkgs.uv)
-    (config.lib.nixGL.wrap pkgs.wl-clipboard)
+  home.packages = with pkgs; [
+    (config.lib.nixGL.wrap aria2)
+    (config.lib.nixGL.wrap bun)
+    (config.lib.nixGL.wrap dualsensectl)
+    (config.lib.nixGL.wrap imagemagick)
+    (config.lib.nixGL.wrap kew)
+    (config.lib.nixGL.wrap nodejs)
+    (config.lib.nixGL.wrap poppler)
+    (config.lib.nixGL.wrap resvg)
+    (config.lib.nixGL.wrap scrcpy)
+    (config.lib.nixGL.wrap tldr)
+    (config.lib.nixGL.wrap uv)
+    (config.lib.nixGL.wrap wl-clipboard)
   ];
 }

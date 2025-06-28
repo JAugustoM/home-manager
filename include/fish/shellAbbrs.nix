@@ -1,7 +1,7 @@
 {
   picoserial = "sudo minicom --device /dev/ttyACM0";
   cn = "cmake -G Ninja -B build -S .";
-  nv = "ninja -C build";
+  nb = "ninja -C build";
   sdi = {
     setCursor = true;
     expansion = "sudo dnf install %";
