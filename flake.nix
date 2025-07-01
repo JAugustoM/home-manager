@@ -9,21 +9,21 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nixgl.url = "github:nix-community/nixGL";
+    stylix = {
+      url = "github:danth/stylix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
-    { nixpkgs, home-manager, nixgl, ... }:
-    let
-      system = "x86_64-linux";
-      pkgs = nixpkgs.legacyPackages.${system};
-    in
+    { nixpkgs, home-manager, nixgl, stylix, ... }:
     {
       homeConfigurations."jaugusto" = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-
-        # Specify your home configuration modules here, for example,
-        # the path to your home.nix.
-        modules = [ ./home.nix ];
+        pkgs = nixpkgs.legacyPackages.x86_64-linux;
+        modules = [ 
+          stylix.homeModules.stylix
+          ./home.nix 
+        ];
         extraSpecialArgs = {
           inherit nixgl;
         };

@@ -13,11 +13,9 @@
   nixGL.installScripts = [ "mesa" ];
 
   imports = [
-    ./modules/sessionVariables.nix
-    ./modules/packages.nix
     ./modules/programs.nix
-    ./modules/sessionPath.nix
-    ./modules/desktopEntries.nix
+    ./modules/system.nix
+    ./modules/stylix.nix
   ];
 
   programs.home-manager.enable = true;
