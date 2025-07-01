@@ -1,2 +1,1 @@
-nix-channel --update
-home-manager switch -b backup
+nh home switch -u -b bak ~/.config/home-manager/

@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, nixgl, ... }:
 {
   home.username = "jaugusto";
   home.homeDirectory = "/home/jaugusto";
@@ -8,7 +8,7 @@
     allowUnfree = true;
   };
 
-  nixGL.packages = import <nixgl> { inherit pkgs; };
+  nixGL.packages = nixgl.packages;
   nixGL.defaultWrapper = "mesa";
   nixGL.installScripts = [ "mesa" ];
 

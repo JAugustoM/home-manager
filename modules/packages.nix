@@ -13,5 +13,6 @@
     (config.lib.nixGL.wrap tldr)
     (config.lib.nixGL.wrap uv)
     (config.lib.nixGL.wrap wl-clipboard)
+    (config.lib.nixGL.wrap youtube-music)
   ];
 }
