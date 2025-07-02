@@ -22,6 +22,7 @@
     ./programs/beets.nix
     ./programs/direnv.nix
     ./programs/distrobox.nix
+    ./programs/eza.nix
     ./programs/fastfetch.nix
     ./programs/fd.nix
     ./programs/fish.nix

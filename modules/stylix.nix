@@ -2,13 +2,16 @@
 {
   stylix = {
     enable = true;
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
-    fonts = {
-      monospace = {
-        package = pkgs.nerd-fonts.iosevka;
-        name = "Iosevka Nerd Font";
-      };
+
+    targets = {
+      neovim.enable = false;
+      kde.enable = false;
+      firefox.enable = false;
     };
-    targets.neovim.enable = false;
+
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
+
+    image = ../include/media/City.jpg;
+    fonts = import ./stylix/fonts.nix pkgs;
   };
 }
