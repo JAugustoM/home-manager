@@ -15,7 +15,7 @@
   imports = [
     ./modules/programs.nix
     ./modules/system.nix
-    ./modules/stylix.nix
+    ./modules/catppuccin.nix
   ];
 
   programs.home-manager.enable = true;

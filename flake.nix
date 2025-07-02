@@ -4,24 +4,27 @@
   inputs = {
     # Specify the source of Home Manager and Nixpkgs.
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixgl.url = "github:nix-community/nixGL";
+    catppuccin.url = "github:catppuccin/nix";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nixgl.url = "github:nix-community/nixGL";
-    stylix = {
-      url = "github:danth/stylix";
+    plasma-manager = {
+      url = "github:nix-community/plasma-manager";
       inputs.nixpkgs.follows = "nixpkgs";
+      inputs.home-manager.follows = "home-manager";
     };
   };
 
   outputs =
-    { nixpkgs, home-manager, nixgl, stylix, ... }:
+    { nixpkgs, home-manager, nixgl, plasma-manager, catppuccin, ... }:
     {
       homeConfigurations."jaugusto" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux;
         modules = [ 
-          stylix.homeModules.stylix
+          catppuccin.homeModules.catppuccin
+          plasma-manager.homeManagerModules.plasma-manager
           ./home.nix 
         ];
         extraSpecialArgs = {
