@@ -6,7 +6,7 @@
     font = {
       package = pkgs.nerd-fonts.iosevka;
       name = "Iosevka Nerd Font";
-      size = 10;
+      size = 12;
     };
     settings = {
       shell = "fish";

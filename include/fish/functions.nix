@@ -1,4 +1,8 @@
 {
+  build-nix = {
+    description = "Builds nix home-manager without updating flakes inputs";
+    body = builtins.readFile ./functions/build-nix.fish;
+  };
   edit-home = {
     description = "Open home-manager folder in neovim";
     body = builtins.readFile ./functions/edit-home.fish;

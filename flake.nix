@@ -10,15 +10,20 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nvf = {
+      url = "github:notashelf/nvf";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
-    { nixpkgs, home-manager, nixgl, catppuccin, ... }:
+    { nixpkgs, home-manager, nixgl, catppuccin, nvf, ... }:
     {
       homeConfigurations."jaugusto" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux;
         modules = [ 
           catppuccin.homeModules.catppuccin
+          nvf.homeManagerModules.default
           ./home.nix 
         ];
         extraSpecialArgs = {
