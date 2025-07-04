@@ -14,7 +14,6 @@
 
   imports = [
     ./modules/programs.nix
-    ./modules/plasma-manager.nix
     ./modules/system.nix
     ./modules/catppuccin.nix
   ];
