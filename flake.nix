@@ -10,20 +10,21 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nvf = {
-      url = "github:notashelf/nvf";
+    plasma-manager = {
+      url = "github:nix-community/plasma-manager";
       inputs.nixpkgs.follows = "nixpkgs";
+      inputs.home-manager.follows = "home-manager";
     };
   };
 
   outputs =
-    { nixpkgs, home-manager, nixgl, catppuccin, nvf, ... }:
+    { nixpkgs, home-manager, nixgl, catppuccin, plasma-manager, ... }:
     {
       homeConfigurations."jaugusto" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux;
         modules = [ 
           catppuccin.homeModules.catppuccin
-          nvf.homeManagerModules.default
+          plasma-manager.homeManagerModules.plasma-manager
           ./home.nix 
         ];
         extraSpecialArgs = {
